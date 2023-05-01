@@ -1,4 +1,4 @@
-package com.example.app;
+package com.sintangwebcenter.esispat;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
         mWebView.setWebViewClient(new MyWebViewClient());
 
         // REMOTE RESOURCE
-        // mWebView.loadUrl("https://example.com");
+        mWebView.loadUrl("https://mikhsandev-laughing-couscous-56gv77j7w7rh47xw-3000.preview.app.github.dev/");
 
         // LOCAL RESOURCE
         // mWebView.loadUrl("file:///android_asset/index.html");

@@ -1,4 +1,4 @@
-package com.example.app;
+package com.sintangwebcenter.esispat;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,7 +12,7 @@ class MyWebViewClient extends WebViewClient {
         String hostname;
 
         // YOUR HOSTNAME
-        hostname = "example.com";
+        hostname = "mikhsandev-laughing-couscous-56gv77j7w7rh47xw-3000.preview.app.github.dev";
 
         Uri uri = Uri.parse(url);
         if (url.startsWith("file:") || uri.getHost() != null && uri.getHost().endsWith(hostname)) {
