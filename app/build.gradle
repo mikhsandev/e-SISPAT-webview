@@ -7,13 +7,24 @@ android {
         applicationId "com.sintangwebcenter.esispat"
         minSdkVersion 21
         targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
+    }
+    signingConfigs {
+        release {
+            if (project.hasProperty('ESISPAT_RELEASE_STORE_FILE')) {
+                storeFile file(ESISPAT_RELEASE_STORE_FILE)
+                storePassword ESISPAT_RELEASE_STORE_PASSWORD
+                keyAlias ESISPAT_RELEASE_KEY_ALIAS
+                keyPassword ESISPAT_RELEASE_KEY_PASSWORD
+            }
+        }
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
